@@ -1,0 +1,19 @@
+{
+    "logo": {
+        "primary": "#9886AA"
+    },
+    "design_system": {
+        "colors": {
+            "dark_background": "#0F172A",
+            "light_background": "#F8FAFC",
+            "panel_background": "#1E293B",
+            "dark_background_accent": "#C084FC",
+            "light_background_accent": "#7E22CE",
+            "secondary_purple": "#581C87",
+            "terciary_purple": "#3B0764"
+        },
+        "typography": {
+            "font_family": "Inter"
+        }
+    }
+}
