@@ -2265,6 +2265,12 @@ em {
   max-width: 320px;
 }
 
+.qr-mail-button {
+  display: none;
+  width: 100%;
+  margin-top: 22px;
+}
+
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, .1);
   background: var(--ink);
@@ -2676,6 +2682,24 @@ em {
 
   .contact-qr {
     padding: 24px;
+  }
+
+  .qr-image,
+  .qr-hint {
+    display: none;
+  }
+
+  .qr-mail-button {
+    display: block;
+  }
+
+  .qr-header small {
+    display: none;
+  }
+
+  .qr-header {
+    justify-content: center;
+    margin-bottom: 18px;
   }
 
 
