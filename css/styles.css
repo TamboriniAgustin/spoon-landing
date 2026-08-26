@@ -210,6 +210,8 @@ em {
   top: 0;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, .08);
+  background: rgba(7, 15, 32, .82);
+  backdrop-filter: blur(2px);
 }
 
 .nav-wrap {
@@ -264,7 +266,10 @@ em {
   min-height: 790px;
   padding: 190px 0 0;
   position: relative;
-  background: var(--ink);
+  background-color: var(--ink);
+  background-image: linear-gradient(90deg, rgba(11, 20, 40, .98) 0%, rgba(11, 20, 40, .88) 38%, rgba(11, 20, 40, .2) 78%), url('../img/background2.jpg');
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -283,12 +288,12 @@ em {
 .hero-grid {
   display: grid;
   min-height: 590px;
-  grid-template-columns: 1.02fr .98fr;
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: 40px;
 }
 
 .hero-copy {
+  max-width: 555px;
   position: relative;
   z-index: 1;
   padding-bottom: 80px;
@@ -344,6 +349,14 @@ em {
 .hero-visual {
   min-height: 485px;
   position: relative;
+}
+
+.hero-building-image {
+  display: block;
+  width: min(100%, 560px);
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .visual-glow {
@@ -543,6 +556,8 @@ em {
 
 .hero-marquee {
   border-top: 1px solid rgba(255, 255, 255, .08);
+  background: rgba(7, 15, 32, .82);
+  backdrop-filter: blur(2px);
 }
 
 .marquee-inner {
@@ -2320,6 +2335,7 @@ em {
   }
 
   .hero {
+    min-height: auto;
     padding-top: 150px;
   }
 
@@ -2337,14 +2353,20 @@ em {
   }
 
   .hero-copy {
+    order: 1;
     padding-bottom: 10px;
   }
 
   .hero-visual {
-    min-height: 465px;
+    order: 2;
+    min-height: 0;
     max-width: 570px;
     width: 100%;
     margin: 0 auto;
+  }
+
+  .hero-building-image {
+    width: 100%;
   }
 
   .proof-grid {
@@ -2483,7 +2505,11 @@ em {
   }
 
   .hero-copy {
-    padding-bottom: 30px;
+    padding: 20px 18px 50px;
+    margin: 0 -18px;
+    background: rgba(7, 15, 32, .58);
+    backdrop-filter: blur(.1px);
+    -webkit-backdrop-filter: blur(.1px);
   }
 
   .hero-text {
@@ -2501,10 +2527,13 @@ em {
   }
 
   .hero-visual {
-    min-height: 395px;
-    transform: scale(.88);
-    transform-origin: top center;
-    margin-bottom: -50px;
+    min-height: 0;
+    transform: none;
+    margin-bottom: 0;
+  }
+
+  .hero-building-image {
+    width: 100%;
   }
 
   .visual-glow {
@@ -2543,8 +2572,10 @@ em {
     white-space: nowrap;
   }
 
-  .marquee-inner span:nth-of-type(n+4),
-  .marquee-inner i:nth-of-type(n+4) {
+  .marquee-inner span:nth-of-type(3),
+  .marquee-inner i:nth-of-type(3),
+  .marquee-inner span:nth-of-type(n+5),
+  .marquee-inner i:nth-of-type(n+5) {
     display: none;
   }
 
